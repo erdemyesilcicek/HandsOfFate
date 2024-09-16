@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newBlack"
+
+    tools:context=".MenuFragment">
+
+    <TextView
+        android:id="@+id/menuAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hands Of Fate"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuLogo" />
+
+    <ImageView
+        android:id="@+id/menuLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/playWithOtherButton"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:text="PLAY WITH OTHER"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuAppName" />
+
+    <Button
+        android:id="@+id/playWithComputerButton"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:text="PLAY WITH COMPUTER"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playWithOtherButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

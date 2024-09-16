@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.erdemyesilcicek.handsoffate.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_playWithOtherFragment"
+            app:destination="@id/playWithOtherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playWithOtherFragment"
+        android:name="com.erdemyesilcicek.handsoffate.PlayWithOtherFragment"
+        android:label="fragment_play_with_other"
+        tools:layout="@layout/fragment_play_with_other" />
+</navigation>
