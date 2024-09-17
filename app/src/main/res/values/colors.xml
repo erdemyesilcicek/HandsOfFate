@@ -3,6 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="newBlack">#252525</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="orange">#FF8500</color>
+    <color name="darkOrange">#E07500</color>
+
     <color name="yellow">#FFDE00</color>
     <color name="darkYellow">#E7C900</color>
 </resources>

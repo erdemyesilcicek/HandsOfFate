@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/newBlack"
     tools:context=".PlayWithOtherFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal"
         android:rotation="180"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +24,9 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="ROCK" />
 
         <Button
@@ -32,8 +35,9 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="PAPER" />
 
         <Button
@@ -42,25 +46,62 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="SCISSOR" />
     </LinearLayout>
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_margin="10dp"
-        android:background="@color/yellow"
+        android:layout_margin="30dp"
+        android:background="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/SecondPlayerThirdStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+
+        <ImageView
+            android:id="@+id/SecondPlayerSecondStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+
+        <ImageView
+            android:id="@+id/SecondPlayerFirstStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,8 +113,9 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="ROCK" />
 
         <Button
@@ -82,8 +124,9 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="PAPER" />
 
         <Button
@@ -92,8 +135,89 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:padding="2dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/cartoon"
+            android:padding="20dp"
             android:text="SCISSOR" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/MainPlayerFirstStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+
+        <ImageView
+            android:id="@+id/MainPlayerSecondStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+
+        <ImageView
+            android:id="@+id/MainPlayerThirdStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/emptystar" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/secondPlayerIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:rotation="180"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/mainPlayerIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <TextView
+        android:id="@+id/mainPlayerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1"
+        android:textSize="20sp"
+        android:fontFamily="@font/cartoon"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <TextView
+        android:id="@+id/secondPlayerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:text="Player 2"
+        android:textSize="20sp"
+        android:fontFamily="@font/cartoon"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
