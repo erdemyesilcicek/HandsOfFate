@@ -1,14 +1,17 @@
-package com.erdemyesilcicek.handsoffate
+package com.erdemyesilcicek.handsoffate.view
 
+import android.app.Dialog
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.text.Selection
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.erdemyesilcicek.handsoffate.databinding.FragmentMenuBinding
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import com.erdemyesilcicek.handsoffate.R
 import com.erdemyesilcicek.handsoffate.databinding.FragmentPlayWithOtherBinding
 
 class PlayWithOtherFragment : Fragment() {
@@ -19,6 +22,9 @@ class PlayWithOtherFragment : Fragment() {
     private var secondPlayerAnimation : AnimationDrawable? = null
     private var mainPlayerAnimation : AnimationDrawable? = null
     private var setTimer : CountDownTimer? = null
+
+    private var mainPlayerName = "Main Player"
+    private var secondPlayerName = "Second Player"
 
     private var mainPlayerReady = false
     private var secondPlayerReady = false
@@ -47,6 +53,7 @@ class PlayWithOtherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonsClicked()
+        getPlayersName()
     }
     private fun buttonsClicked(){
         binding.MainPlayerButtonRock.setOnClickListener {
@@ -82,7 +89,7 @@ class PlayWithOtherFragment : Fragment() {
         binding.mainPlayerIcon.setBackgroundResource(R.drawable.animation_hands)
         mainPlayerAnimation = binding.mainPlayerIcon.background as AnimationDrawable
 
-        setTimer = object : CountDownTimer(3000,1000){
+        setTimer = object : CountDownTimer(3000,1000) {
             override fun onTick(p0: Long) {
                 secondPlayerAnimation?.start()
                 mainPlayerAnimation?.start()
@@ -176,6 +183,27 @@ class PlayWithOtherFragment : Fragment() {
                 3 -> binding.SecondPlayerThirdStar.setImageResource(R.drawable.star)
             }
         }
+    }
+
+    private fun getPlayersName() {
+        val nameDialog = Dialog(requireContext())
+        nameDialog.setContentView(R.layout.player_name_card)
+        nameDialog.findViewById<Button>(R.id.startButton).setOnClickListener {
+            val mainName = nameDialog.findViewById<EditText>(R.id.mainPLayerNameEditText).text
+            val secondName = nameDialog.findViewById<EditText>(R.id.secondPLayerNameEditText).text
+
+            if(mainName.isNotEmpty() && secondName.isNotEmpty()){
+                mainPlayerName = mainName.toString()
+                secondPlayerName = secondName.toString()
+
+                binding.mainPlayerNameText.text = mainPlayerName
+                binding.secondPlayerNameText.text = secondPlayerName
+                nameDialog.cancel()
+            } else{
+                Toast.makeText(requireContext(),"Enter both players name, please.", Toast.LENGTH_LONG).show()
+            }
+        }
+        nameDialog.show()
     }
 
     override fun onDestroyView() {
