@@ -18,5 +18,18 @@
         android:id="@+id/playWithOtherFragment"
         android:name="com.erdemyesilcicek.handsoffate.view.PlayWithOtherFragment"
         android:label="fragment_play_with_other"
-        tools:layout="@layout/fragment_play_with_other" />
+        tools:layout="@layout/fragment_play_with_other" >
+        <action
+            android:id="@+id/action_playWithOtherFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.erdemyesilcicek.handsoffate.view.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/action_finishFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>

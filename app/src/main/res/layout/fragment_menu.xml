@@ -38,6 +38,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/cartoon"
                 android:text="Hands Of Fate"
+                android:layout_marginTop="15dp"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

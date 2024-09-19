@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.erdemyesilcicek.handsoffate.R
 import com.erdemyesilcicek.handsoffate.databinding.FragmentPlayWithOtherBinding
 
@@ -108,6 +109,7 @@ class PlayWithOtherFragment : Fragment() {
 
                 setSelectionIcon()
                 setScore()
+                endGame()
             }
         }.start()
     }
@@ -204,6 +206,13 @@ class PlayWithOtherFragment : Fragment() {
             }
         }
         nameDialog.show()
+    }
+
+    private fun endGame(){
+        if(scoreMainPlayer == 3 || scoreSecondPlayer == 3){
+            val action = PlayWithOtherFragmentDirections.actionPlayWithOtherFragmentToFinishFragment()
+            Navigation.findNavController(requireView()).navigate(action)
+        }
     }
 
     override fun onDestroyView() {
