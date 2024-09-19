@@ -80,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
 
         <ImageView
@@ -87,6 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
 
         <ImageView
@@ -94,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
     </LinearLayout>
 
@@ -157,6 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
 
         <ImageView
@@ -164,6 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
 
         <ImageView
@@ -171,6 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="1dp"
             android:src="@drawable/emptystar" />
     </LinearLayout>
 
@@ -179,7 +185,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:rotation="180"
-        android:src="@drawable/rock"
+        tools:src="@drawable/rock"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,11 +195,12 @@
         android:id="@+id/mainPlayerIcon"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/paper"
+        tools:src="@drawable/paper"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
 
     <TextView
         android:id="@+id/mainPlayerNameText"
@@ -219,5 +226,33 @@
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+    <TextView
+        android:id="@+id/mainPlayerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cartoon"
+        android:text="Ready?"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainPlayerIcon"
+        app:layout_constraintEnd_toStartOf="@+id/mainPlayerIcon"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/mainPlayerIcon" />
+
+    <TextView
+        android:id="@+id/secondPlayerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:textSize="16sp"
+        android:fontFamily="@font/cartoon"
+        android:text="Ready?"
+        app:layout_constraintBottom_toBottomOf="@+id/secondPlayerIcon"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/secondPlayerIcon"
+        app:layout_constraintTop_toTopOf="@+id/secondPlayerIcon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
