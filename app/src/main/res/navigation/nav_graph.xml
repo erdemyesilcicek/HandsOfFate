@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_menuFragment_to_playWithOtherFragment"
             app:destination="@id/playWithOtherFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_playWithComputerFragment"
+            app:destination="@id/playWithComputerFragment" />
     </fragment>
     <fragment
         android:id="@+id/playWithOtherFragment"
@@ -30,6 +33,27 @@
         tools:layout="@layout/fragment_finish" >
         <action
             android:id="@+id/action_finishFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playWithComputerFragment"
+        android:name="com.erdemyesilcicek.handsoffate.view.PlayWithComputerFragment"
+        android:label="fragment_play_with_computer"
+        tools:layout="@layout/fragment_play_with_computer" >
+        <action
+            android:id="@+id/action_playWithComputerFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_playWithComputerFragment_to_computerGameOverFragment"
+            app:destination="@id/computerGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/computerGameOverFragment"
+        android:name="com.erdemyesilcicek.handsoffate.view.ComputerGameOverFragment"
+        android:label="fragment_computer_game_over"
+        tools:layout="@layout/fragment_computer_game_over" >
+        <action
+            android:id="@+id/action_computerGameOverFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
     </fragment>
 </navigation>

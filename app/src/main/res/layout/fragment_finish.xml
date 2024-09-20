@@ -38,19 +38,6 @@
             android:padding="5dp"
             android:layout_margin="2dp"/>
 
-        <TextView
-            android:id="@+id/winNameText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:fontFamily="@font/cartoon"
-            android:text="player"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:padding="5dp"
-            android:layout_margin="2dp"/>
-
         <Button
             android:id="@+id/homeButton"
             android:layout_width="match_parent"

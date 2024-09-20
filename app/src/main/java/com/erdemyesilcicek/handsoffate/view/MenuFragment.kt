@@ -38,7 +38,8 @@ class MenuFragment : Fragment() {
     }
 
     fun playWithComputerButtonClicked(view: View){
-        println("play with computer clicked")
+        val action = MenuFragmentDirections.actionMenuFragmentToPlayWithComputerFragment()
+        Navigation.findNavController(requireView()).navigate(action)
     }
 
     override fun onDestroyView() {
